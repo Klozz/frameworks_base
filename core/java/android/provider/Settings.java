@@ -722,7 +722,7 @@ public final class Settings {
      */
     @SdkConstant(SdkConstantType.ACTIVITY_INTENT_ACTION)
     public static final String ACTION_NOTIFICATION_LISTENER_SETTINGS
-            = "android.settings.NOTIFICATION_LISTENER_SETTINGS";
+            = "android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS";
 
     /**
      * Activity Action: Show settings for video captioning.
@@ -6823,6 +6823,12 @@ public final class Settings {
         public static final String QUIET_HOURS_DIM = "quiet_hours_dim";
 
         /**
+         * Whether to remove the system sounds during quiet hours.
+         * @hide
+         */
+        public static final String QUIET_HOURS_SYSTEM = "quiet_hours_system";
+
+        /**
          * Immersive Mode
          * @hide
          */
@@ -7169,6 +7175,13 @@ public final class Settings {
          * @hide
          */
         public static final String SMART_PHONE_CALLER = "smart_phone_caller";
+
+        /**
+         * Detailed incall info
+         *
+         * @hide
+         */
+        public static final String DETAILED_INCALL_INFO = "detailed_incall_info";
 
         /**
          * The hostname for this device
@@ -7625,6 +7638,42 @@ public final class Settings {
         public static final String VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
 
         /**
+         * Custom automatic brightness light sensor levels.
+         * The value is a comma separated int array with length N.
+         * Example: "100,300,3000".
+         *
+         * @hide
+         */
+        public static final String AUTO_BRIGHTNESS_LUX = "auto_brightness_lux";
+
+        /**
+         * Custom automatic brightness display backlight brightness values.
+         * The value is a comma separated int array with length N+1.
+         * Example: "10,50,100,255".
+         *
+         * @hide
+         */
+        public static final String AUTO_BRIGHTNESS_BACKLIGHT = "auto_brightness_backlight";
+
+        /**
+         * Correction factor for auto-brightness adjustment light sensor
+         * debounce times.
+         * Smaller factors will make the adjustment more responsive, but might
+         * cause flicker and/or cause higher CPU usage.
+         * Valid range is 0.2 ... 3
+         *
+         * @hide
+         */
+        public static final String AUTO_BRIGHTNESS_RESPONSIVENESS = "auto_brightness_responsiveness";
+
+        /**
+         * Whether to enable adjustment of automatic brightness adjustment
+         * to sunrise and sunset.
+         * @hide
+         */
+        public static final String AUTO_BRIGHTNESS_TWILIGHT_ADJUSTMENT = "auto_brightness_twilight_adjustment";
+
+        /**
          *
          * Smooth Progress Bar Mirror
          * @hide
@@ -7844,6 +7893,25 @@ public final class Settings {
          * @hide
          */
         public static final String PHONE_BLACKLIST_REGEX_ENABLED = "phone_blacklist_regex_enabled";
+
+        /**
+         * @hide
+         */
+        public static final String PROXIMITY_ON_WAKE = "proximity_on_wake";
+
+        /**
+         * Boolean value whether to link ringtone and notification volumes
+         *
+         * @hide
+         */
+        public static final String VOLUME_LINK_NOTIFICATION = "volume_link_notification";
+
+        /**
+         * Volume key controls ringtone or media sound stream
+         *
+         * @hide
+         */
+        public static final String VOLUME_KEYS_CONTROL_RING_STREAM = "volume_keys_control_ring_stream";
 
     }
 
