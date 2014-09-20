@@ -490,11 +490,7 @@ public class IconPackHelper {
 
         private static Bitmap createIconBitmap(Drawable icon, Resources res, int iconBack,
                                                int iconMask, int iconUpon, float scale,
-<<<<<<< HEAD
-                                               int iconSize, float[] colorFilter) {
-=======
                                                int iconSize) {
->>>>>>> Themes: Pass resource IDs instead of bitmaps [1/2]
             if (iconSize <= 0) return null;
 
             final Canvas canvas = new Canvas();

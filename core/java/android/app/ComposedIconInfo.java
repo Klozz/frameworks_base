@@ -40,24 +40,10 @@ public class ComposedIconInfo implements Parcelable {
             iconBacks = new int[backCount];
             for (int i = 0; i < backCount; i++) {
                 iconBacks[i] = source.readInt();
-<<<<<<< HEAD
             }
         }
         iconMask = source.readInt();
         iconUpon = source.readInt();
-        int colorFilterSize = source.readInt();
-        if (colorFilterSize > 0) {
-            colorFilter = new float[colorFilterSize];
-            for (int i = 0; i < colorFilterSize; i++) {
-                colorFilter[i] = source.readFloat();
-            }
-        }
-=======
-            }
-        }
-        iconMask = source.readInt();
-        iconUpon = source.readInt();
->>>>>>> Themes: Pass resource IDs instead of bitmaps [1/2]
     }
 
     @Override
@@ -74,26 +60,12 @@ public class ComposedIconInfo implements Parcelable {
         if (iconBacks != null) {
             for (int resId : iconBacks) {
                 dest.writeInt(resId);
-<<<<<<< HEAD
-            }
-        }
-        dest.writeInt(iconMask);
-        dest.writeInt(iconUpon);
-        if (colorFilter != null) {
-            dest.writeInt(colorFilter.length);
-            for (float val : colorFilter) {
-                dest.writeFloat(val);
-=======
->>>>>>> Themes: Pass resource IDs instead of bitmaps [1/2]
             }
         } else {
             dest.writeInt(0);
         }
-<<<<<<< HEAD
-=======
         dest.writeInt(iconMask);
         dest.writeInt(iconUpon);
->>>>>>> Themes: Pass resource IDs instead of bitmaps [1/2]
     }
 
     public static final Creator<ComposedIconInfo> CREATOR
